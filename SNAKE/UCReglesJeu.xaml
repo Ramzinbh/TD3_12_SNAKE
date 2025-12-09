@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:SNAKE"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+    <Grid Background="#FF93C100">
+        <Label Content="SNAKE" HorizontalAlignment="Center" Margin="0,48,0,0" VerticalAlignment="Top" Width="164" Height="68" FontWeight="Bold" FontSize="48" Foreground="White"/>
+        <Image Margin="300,171,300,171" Source="/image/serpend.gif" Stretch="Fill"/>
+
     </Grid>
 </UserControl>

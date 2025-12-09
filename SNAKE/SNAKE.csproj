@@ -10,10 +10,12 @@
 
   <ItemGroup>
     <None Remove="image\background.jpg" />
+    <None Remove="image\serpend.gif" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="image\background.jpg" />
+    <Resource Include="image\serpend.gif" />
   </ItemGroup>
 
 </Project>
