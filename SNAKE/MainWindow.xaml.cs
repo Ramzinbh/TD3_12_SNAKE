@@ -19,6 +19,13 @@ namespace SNAKE
         public MainWindow()
         {
             InitializeComponent();
+            AfficheRegleJeu();
+        }
+
+        private void AfficheRegleJeu()
+        {
+            UCReglesJeu uc = new UCReglesJeu();
+            ZoneJeu.Content = uc;
         }
     }
 }
