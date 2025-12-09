@@ -5,8 +5,17 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SNAKE"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="1000" d:DesignWidth="1920">
     <Grid>
-            
+        <RadioButton x:Name="rbBleu" Width="150" Height="150" Margin="108,150,542,150">
+        </RadioButton>
+        <RadioButton x:Name="rbTraineau" Width="150" Height="150" Margin="526,150,124,150">
+            <RadioButton.Content>
+                <Image Source="img/pereNoelTraineauGauche.png" Width="126" Height="139"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <Label x:Name="labConsigne" Content="Choix du personnage" HorizontalAlignment="Center" Margin="0,29,0,0" VerticalAlignment="Top" Foreground="White" FontSize="22" VerticalContentAlignment ="Center" HorizontalContentAlignment ="Center" Width="230"/>
+        <Button x:Name="butJouer" Content="Jouer" HorizontalAlignment="Center" Margin="0,321,0,0" VerticalAlignment="Top" Height="51" Width="230" FontSize="20" VerticalContentAlignment ="Center" HorizontalContentAlignment ="Center" IsEnabled="False"/>
+
     </Grid>
 </UserControl>
