@@ -5,8 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SNAKE"
              mc:Ignorable="d" 
-             Height="1080" Width="1920">
-    <Grid>
-            
-    </Grid>
+             d:DesignHeight="850" d:DesignWidth="1700">
+    <Canvas>
+        <Image Height="650" Canvas.Left="525" Source="/image/map.png" Stretch="Fill" Canvas.Top="100" Width="650" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+    </Canvas>
 </UserControl>

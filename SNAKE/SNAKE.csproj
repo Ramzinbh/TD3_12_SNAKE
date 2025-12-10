@@ -12,6 +12,7 @@
     <None Remove="image\background.jpg" />
     <None Remove="image\bleu.jpg" />
     <None Remove="image\jaune.jpg" />
+    <None Remove="image\map.png" />
     <None Remove="image\rouge.jpg" />
     <None Remove="image\serpend.gif" />
     <None Remove="image\bombe.jpg" />
@@ -23,6 +24,7 @@
     <Resource Include="image\background.jpg" />
     <Resource Include="image\bleu.jpg" />
     <Resource Include="image\jaune.jpg" />
+    <Resource Include="image\map.png" />
     <Resource Include="image\rouge.jpg" />
     <Resource Include="image\serpend.gif" />
     <Resource Include="image\bombe.jpg" />

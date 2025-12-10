@@ -22,9 +22,11 @@ namespace SNAKE
         {
             InitializeComponent();
             AfficheRegleJeu();
+            InitializeMap();
+            InitializeSerpent();
             InitializeTimer();
-
         }
+
 
         private void AfficheRegleJeu()
         {
@@ -34,7 +36,20 @@ namespace SNAKE
             uc.butDemarrer.Click += AfficheChoixPerso;
         }
 
-        int[,] map = new int[20, 20];
+        private void InitializeMap()
+        {
+            int[,] map = new int[22, 22];
+            for (int i = 0; i < map.GetLength(0); i++)
+                for (int j = 0; j < map.GetLength(1); j++)
+                {
+                    map[i, j] = 0;
+                }
+        }
+
+        private void InitializeSerpent()
+        {
+            List<int[]> list = new List<int[]>();
+        }
 
         private void InitializeTimer()
         {
