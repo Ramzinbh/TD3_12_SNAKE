@@ -17,22 +17,15 @@ namespace SNAKE
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static string CouleurSerpent { get; set; }
-        
-        private BitmapImage serpent = new BitmapImage();
         public MainWindow()
         {
             InitializeComponent();
             AfficheRegleJeu();
-            InitializeImages();
+            
             
         }
 
-        private void InitializeImages()
-        {
-            throw new NotImplementedException();
-        }
-
+        
         private void AfficheRegleJeu()
         {
             UCReglesJeu uc = new UCReglesJeu();

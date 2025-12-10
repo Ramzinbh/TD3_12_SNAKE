@@ -22,17 +22,18 @@ namespace SNAKE
     public partial class UCJeu : UserControl
     {
         private DispatcherTimer minuterie;
+        public static string CouleurSerpent { get; set; }
         public UCJeu()
         {
             InitializeComponent();
             InitializeMap();
             InitializeSerpent();
+            InitializeImages();
             InitializeTimer();
         }
-
+        int[,] map = new int[22, 22];
         private void InitializeMap()
         {
-            int[,] map = new int[22, 22];
             for (int i = 0; i < map.GetLength(0); i++)
                 for (int j = 0; j < map.GetLength(1); j++)
                 {
@@ -40,9 +41,22 @@ namespace SNAKE
                 }
         }
 
+        List<int[]> listSerpent = new List<int[]>();
         private void InitializeSerpent()
         {
-            List<int[]> list = new List<int[]>();
+            listSerpent.Add(new int[] { map.GetLength(0) / 2, (map.GetLength(1) / 2) - 2 });
+            listSerpent.Add(new int[] { map.GetLength(0) / 2, (map.GetLength(1) / 2) - 1 });
+            listSerpent.Add(new int[] { map.GetLength(0) / 2, map.GetLength(1) / 2});
+            for (int i = 0; i < listSerpent.Count; i++)
+            {
+                map[listSerpent[i][0], listSerpent[i][1]] = 1;
+            }
+        }
+
+        private void InitializeImages()
+        {
+            string nomFichierCouleur = $"pack://application:,,,/image/bleu.jpg";
+            caseSerpent = new BitmapImage(new Uri(nomFichierCouleur));
         }
 
         private void InitializeTimer()
@@ -58,7 +72,17 @@ namespace SNAKE
 
         private void Jeu(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < map.GetLength(0); i++)
+            {
+                for (int j = 0; j < map.GetLength(1); j++)
+                {
+                    if (map[i, j] == 1)
+                    {
+                        //affiche le serpent
+                    }
+
+                }
+            }
         }
     }
 }

@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:SNAKE"
              mc:Ignorable="d" 
              d:DesignHeight="850" d:DesignWidth="1700">
-    <Canvas Width="506" Height="506" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,150,0,0">
+    <Canvas Width="506" Height="506" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,150,0,0" RenderTransformOrigin="0.526,0.528">
         <Image x:Name="imgMap" Height="506" Canvas.Left="0" Source="/image/map.png" Stretch="Fill" Canvas.Top="0" Width="506" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0"/>
-
+        <Image x:Name="caseSerpent" Source="/image/bleu.jpg" Height="23" Width="23"/>
     </Canvas>
 </UserControl>
