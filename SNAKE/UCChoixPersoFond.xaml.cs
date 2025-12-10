@@ -28,25 +28,25 @@ namespace SNAKE
         private void rbBleu_Click(object sender, RoutedEventArgs e)
         {
             butJouer.IsEnabled = true;
-            MainWindow.Perso = "Bleu";
+            MainWindow.CouleurSerpent = "Bleu";
         }
 
         private void rbJaune_Click(object sender, RoutedEventArgs e)
         {
             butJouer.IsEnabled = true;
-            MainWindow.Perso = "Jaune";
+            MainWindow.CouleurSerpent = "Jaune";
         }
 
         private void rbRouge_Click(object sender, RoutedEventArgs e)
         {
             butJouer.IsEnabled = true;
-            MainWindow.Perso = "Rouge";
+            MainWindow.CouleurSerpent = "Rouge";
         }
 
         private void rbVert_Click(object sender, RoutedEventArgs e)
         {
             butJouer.IsEnabled = true;
-            MainWindow.Perso = "Vert";
+            MainWindow.CouleurSerpent = "Vert";
         }
     }
 }
