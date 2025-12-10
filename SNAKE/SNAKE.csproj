@@ -10,16 +10,29 @@
 
   <ItemGroup>
     <None Remove="image\background.jpg" />
+    <None Remove="image\bleu.jpg" />
+    <None Remove="image\jaune.jpg" />
+    <None Remove="image\rouge.jpg" />
     <None Remove="image\serpend.gif" />
     <None Remove="image\bombe.jpg" />
     <None Remove="image\pomme.jpg" />
+    <None Remove="image\vert.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="UCReglesJeu.xaml" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="image\background.jpg" />
+    <Resource Include="image\bleu.jpg" />
+    <Resource Include="image\jaune.jpg" />
+    <Resource Include="image\rouge.jpg" />
     <Resource Include="image\serpend.gif" />
     <Resource Include="image\bombe.jpg" />
     <Resource Include="image\pomme.jpg" />
+    <Resource Include="image\vert.jpg" />
+    <Resource Include="UCReglesJeu.xaml" />
   </ItemGroup>
 
 </Project>
