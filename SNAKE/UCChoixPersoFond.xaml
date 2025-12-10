@@ -7,22 +7,22 @@
              mc:Ignorable="d" 
              d:DesignHeight="850" d:DesignWidth="1700">
     <Grid>
-        <RadioButton x:Name="rbBleu" Width="150" Height="150" Margin="538,275,1012,425">
+        <RadioButton x:Name="rbBleu" Width="150" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,275,550,0">
             <RadioButton.Content>
                 <Image Source="/image/bleu.jpg" Width = "131" Height="150" Stretch="None"/>
             </RadioButton.Content>
         </RadioButton>
-        <RadioButton x:Name="rbVert" Width="150" Height="150" Margin="1004,275,546,425">
+        <RadioButton x:Name="rbVert" Width="150" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="475,275,0,0">
             <RadioButton.Content>
                 <Image Source="/image/vert.jpg" Width="131" Height="150" Stretch="None"/>
             </RadioButton.Content>
         </RadioButton>
-        <RadioButton x:Name="rbRouge" Width="150" Height="150" Margin="1004,504,546,196">
+        <RadioButton x:Name="rbRouge" Width="150" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="475.2,500,0,0">
             <RadioButton.Content>
                 <Image Source="/image/rouge.jpg" Width = "129" Height="151" Stretch="None"></Image>
             </RadioButton.Content>
         </RadioButton>
-        <RadioButton x:Name="rbJaune" Width="150" Height="150" Margin="538,504,1012,196">
+        <RadioButton x:Name="rbJaune" Width="150" Height="150" Margin="0,500,550,0" HorizontalAlignment="Center" VerticalAlignment="Top">
             <RadioButton.Content>
                 <Image Source="/image/jaune.jpg" Width="130" Height="153" Stretch="None"/>
             </RadioButton.Content>
