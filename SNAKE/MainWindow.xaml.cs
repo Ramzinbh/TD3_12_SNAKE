@@ -47,6 +47,14 @@ namespace SNAKE
         {
             UCReglesJeu uc = new UCReglesJeu();
             ZoneJeu.Content = uc;
+            uc.ButDemarrer.Click += AfficheChoixPerso;
+        }
+
+        private void AfficheChoixPerso(object sender, RoutedEventArgs e)
+        {
+            UCChoixPersoFond uc = new UCChoixPersoFond();
+            ZoneJeu.Content = uc;
+
         }
     }
 }
