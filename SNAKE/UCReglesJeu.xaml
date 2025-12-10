@@ -10,7 +10,7 @@
         <Label Content="SNAKE" HorizontalAlignment="Center" Margin="0,96,0,0" VerticalAlignment="Top" Width="314" Height="149" FontWeight="Bold" FontSize="96" Foreground="White"/>
         <Label Content="Manges le plus de pommes en évitant les obstacles" HorizontalAlignment="Center" Margin="0,332,0,0" VerticalAlignment="Top" Width="1100" Height="128" FontSize="48" Foreground="White"/>
         <Image Margin="784,540,784,310" Source="/image/serpend.gif" Stretch="Fill"/>
-        <Button x:Name="ButDemarrer" Content="Démarrer" HorizontalAlignment="Center" Margin="0,867,0,0" VerticalAlignment="Top" Height="123" Width="352" Background="Black" Foreground="White" FontSize="48" FontWeight="Bold"/>
+        <Button x:Name="butDemarrer" Content="Démarrer" HorizontalAlignment="Left" Margin="828,856,0,0" VerticalAlignment="Top" Height="137" Width="358" FontSize="50"/>
 
     </Grid>
 </UserControl>

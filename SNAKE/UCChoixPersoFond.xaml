@@ -17,7 +17,7 @@
                 <Image Source="/image/vert.jpg" Width="131" Height="150" Stretch="None"/>
             </RadioButton.Content>
         </RadioButton>
-        <RadioButton x:Name="rbRouge" Width="150" Height="150" Margin="1220,550,550,300" Checked="rbRouge_Checked">
+        <RadioButton x:Name="rbRouge" Width="150" Height="150" Margin="1220,550,550,300">
             <RadioButton.Content>
                 <Image Source="/image/rouge.jpg" Width = "129" Height="151" Stretch="None"></Image>
             </RadioButton.Content>

@@ -22,24 +22,7 @@ namespace SNAKE
         {
             InitializeComponent();
             AfficheRegleJeu();
-            InitializeTimer();
-        }
-
-        int[,] map = new int[20, 20];
-
-        private void InitializeTimer()
-        {
-            minuterie = new DispatcherTimer();
-            // configure l'intervalle du Timer :62 images par s
-            minuterie.Interval = TimeSpan.FromMilliseconds(6);
-            // associe l’appel de la méthode Jeu à la fin de la minuterie
-            minuterie.Tick += Jeu;
-            // lancement du timer
-            minuterie.Start();
-        }
-
-        private void Jeu(object? sender, EventArgs e)
-        {
+            //InitializeTimer();
 
         }
 
@@ -47,8 +30,27 @@ namespace SNAKE
         {
             UCReglesJeu uc = new UCReglesJeu();
             ZoneJeu.Content = uc;
-            uc.ButDemarrer.Click += AfficheChoixPerso;
+            uc.butDemarrer.Click += AfficheChoixPerso;
         }
+
+        int[,] map = new int[20, 20];
+
+        //private void InitializeTimer()
+        //{
+        //    minuterie = new DispatcherTimer();
+        //    // configure l'intervalle du Timer :62 images par s
+        //    minuterie.Interval = TimeSpan.FromMilliseconds(6);
+        //    // associe l’appel de la méthode Jeu à la fin de la minuterie
+        //    minuterie.Tick += Jeu;
+        //    // lancement du timer
+        //    minuterie.Start();
+        //}
+
+
+        //private void Jeu(object? sender, EventArgs e)
+        //{
+
+        //}
 
         private void AfficheChoixPerso(object sender, RoutedEventArgs e)
         {
