@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="850" d:DesignWidth="1700">
     <Grid>
-        <Label Content="SNAKE" HorizontalAlignment="Center" Margin="0,96,0,0" VerticalAlignment="Top" Width="314" Height="149" FontWeight="Bold" FontSize="96" Foreground="White"/>
+        <Image Source="/image/logoSnake.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="319" Stretch="Fill" Width="422"/>
         <Label Content="Manges le plus de pommes en évitant les obstacles" HorizontalAlignment="Center" Margin="0,250,0,0" VerticalAlignment="Top" Width="1100" Height="128" FontSize="48" Foreground="White"/>
         <Image Margin="633,323,639,287" Source="/image/serpend.gif"/>
         <Button x:Name="butDemarrer" Content="Démarrer" HorizontalAlignment="Center" Margin="0,640,0,0" VerticalAlignment="Top" Height="131" Width="314" FontSize="50"/>
