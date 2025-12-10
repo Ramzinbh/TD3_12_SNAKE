@@ -12,5 +12,5 @@
         <Image Margin="633,323,639,287" Source="/image/serpend.gif"/>
         <Button x:Name="butDemarrer" Content="Démarrer" HorizontalAlignment="Center" Margin="0,640,0,0" VerticalAlignment="Top" Height="131" Width="314" FontSize="50"/>
 
-    </Canvas>
+    </Grid>
 </UserControl>
