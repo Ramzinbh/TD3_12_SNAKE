@@ -7,15 +7,28 @@
              mc:Ignorable="d" 
              d:DesignHeight="1000" d:DesignWidth="1920">
     <Grid>
-        <RadioButton x:Name="rbBleu" Width="150" Height="150" Margin="108,150,542,150">
-        </RadioButton>
-        <RadioButton x:Name="rbTraineau" Width="150" Height="150" Margin="526,150,124,150">
+        <RadioButton x:Name="rbBleu" Width="150" Height="150" Margin="571,246,1199,604">
             <RadioButton.Content>
-                <Image Source="img/pereNoelTraineauGauche.png" Width="126" Height="139"/>
+                <Image Source="/image/bleu.jpg" Width = "131" Height="150" Stretch="None"></Image>
             </RadioButton.Content>
         </RadioButton>
-        <Label x:Name="labConsigne" Content="Choix du personnage" HorizontalAlignment="Center" Margin="0,29,0,0" VerticalAlignment="Top" Foreground="White" FontSize="22" VerticalContentAlignment ="Center" HorizontalContentAlignment ="Center" Width="230"/>
-        <Button x:Name="butJouer" Content="Jouer" HorizontalAlignment="Center" Margin="0,321,0,0" VerticalAlignment="Top" Height="51" Width="230" FontSize="20" VerticalContentAlignment ="Center" HorizontalContentAlignment ="Center" IsEnabled="False"/>
+        <RadioButton x:Name="rbVert" Width="150" Height="150" Margin="1220,246,550,604">
+            <RadioButton.Content>
+                <Image Source="/image/vert.jpg" Width="131" Height="150" Stretch="None"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton x:Name="rbRouge" Width="150" Height="150" Margin="1220,550,550,300" Checked="rbRouge_Checked">
+            <RadioButton.Content>
+                <Image Source="/image/rouge.jpg" Width = "129" Height="151" Stretch="None"></Image>
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton x:Name="rbJaune" Width="150" Height="150" Margin="571,543,1199,307">
+            <RadioButton.Content>
+                <Image Source="/image/jaune.jpg" Width="130" Height="153" Stretch="None"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <Label x:Name="labConsigne" Content="Choisissez la couleur de votre serpent" HorizontalAlignment="Center" Margin="0,47,0,0" VerticalAlignment="Top" Foreground="White" FontSize="30" VerticalContentAlignment ="Center" HorizontalContentAlignment ="Center" Width="550" Height="145"/>
+        <Button x:Name="butJouer" Content="Jouer" HorizontalAlignment="Center" Margin="0,821,0,0" VerticalAlignment="Top" Height="78" Width="308" FontSize="20" VerticalContentAlignment ="Center" HorizontalContentAlignment ="Center" IsEnabled="False"/>
 
     </Grid>
 </UserControl>
