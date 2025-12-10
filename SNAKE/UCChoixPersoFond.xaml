@@ -7,22 +7,22 @@
              mc:Ignorable="d" 
              d:DesignHeight="850" d:DesignWidth="1700">
     <Grid>
-        <RadioButton x:Name="rbBleu" Width="150" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,275,550,0">
+        <RadioButton x:Name="rbBleu" Width="150" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,275,550,0" Click="rbBleu_Click">
             <RadioButton.Content>
                 <Image Source="/image/bleu.jpg" Width = "131" Height="150" Stretch="None"/>
             </RadioButton.Content>
         </RadioButton>
-        <RadioButton x:Name="rbVert" Width="150" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="475,275,0,0">
+        <RadioButton x:Name="rbVert" Width="150" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="475,275,0,0" Click="rbVert_Click">
             <RadioButton.Content>
                 <Image Source="/image/vert.jpg" Width="131" Height="150" Stretch="None"/>
             </RadioButton.Content>
         </RadioButton>
-        <RadioButton x:Name="rbRouge" Width="150" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="475.2,500,0,0">
+        <RadioButton x:Name="rbRouge" Width="150" Height="150" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="475.2,500,0,0" Click="rbRouge_Click">
             <RadioButton.Content>
                 <Image Source="/image/rouge.jpg" Width = "129" Height="151" Stretch="None"></Image>
             </RadioButton.Content>
         </RadioButton>
-        <RadioButton x:Name="rbJaune" Width="150" Height="150" Margin="0,500,550,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+        <RadioButton x:Name="rbJaune" Width="150" Height="150" Margin="0,500,550,0" HorizontalAlignment="Center" VerticalAlignment="Top" Click="rbJaune_Click">
             <RadioButton.Content>
                 <Image Source="/image/jaune.jpg" Width="130" Height="153" Stretch="None"/>
             </RadioButton.Content>

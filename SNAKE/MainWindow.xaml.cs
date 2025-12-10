@@ -17,6 +17,7 @@ namespace SNAKE
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static string Perso { get; set; }
         private DispatcherTimer minuterie;
         public MainWindow()
         {
