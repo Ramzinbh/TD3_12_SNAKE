@@ -5,12 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SNAKE"
              mc:Ignorable="d" 
-             Height="1080" Width="1920">
-    <Canvas>
-        <Label Content="SNAKE" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="149" FontWeight="Bold" FontSize="96" Foreground="White" Canvas.Left="803" Canvas.Top="86"/>
-        <Label Content="Manges le plus de pommes en évitant les obstacles" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1100" Height="128" FontSize="48" Foreground="White" Canvas.Left="410" Canvas.Top="311"/>
-        <Image Source="/image/serpend.gif" Stretch="Fill" Canvas.Left="744" Canvas.Top="475" Height="205" Width="395" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Button x:Name="butDemarrer" Content="Démarrer" HorizontalAlignment="Left" VerticalAlignment="Top" Height="137" Width="358" FontSize="50" Canvas.Left="781" Canvas.Top="856"/>
+             d:DesignHeight="850" d:DesignWidth="1700">
+    <Grid>
+        <Label Content="SNAKE" HorizontalAlignment="Center" Margin="0,96,0,0" VerticalAlignment="Top" Width="314" Height="149" FontWeight="Bold" FontSize="96" Foreground="White"/>
+        <Label Content="Manges le plus de pommes en évitant les obstacles" HorizontalAlignment="Center" Margin="0,250,0,0" VerticalAlignment="Top" Width="1100" Height="128" FontSize="48" Foreground="White"/>
+        <Image Margin="633,323,639,287" Source="/image/serpend.gif"/>
+        <Button x:Name="butDemarrer" Content="Démarrer" HorizontalAlignment="Center" Margin="0,640,0,0" VerticalAlignment="Top" Height="131" Width="314" FontSize="50"/>
 
     </Canvas>
 </UserControl>
