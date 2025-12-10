@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:SNAKE"
              mc:Ignorable="d" 
              Height="1080" Width="1920">
-    <Grid>
+    <Canvas>
         <RadioButton x:Name="rbBleu" Width="150" Height="150" Margin="571,246,1199,604">
             <RadioButton.Content>
                 <Image Source="/image/bleu.jpg" Width = "131" Height="150" Stretch="None"></Image>
@@ -27,8 +27,8 @@
                 <Image Source="/image/jaune.jpg" Width="130" Height="153" Stretch="None"/>
             </RadioButton.Content>
         </RadioButton>
-        <Label x:Name="labConsigne" Content="Choisissez la couleur de votre serpent" HorizontalAlignment="Center" Margin="0,47,0,0" VerticalAlignment="Top" Foreground="White" FontSize="30" VerticalContentAlignment ="Center" HorizontalContentAlignment ="Center" Width="550" Height="145"/>
-        <Button x:Name="butJouer" Content="Jouer" HorizontalAlignment="Center" Margin="0,821,0,0" VerticalAlignment="Top" Height="78" Width="308" FontSize="20" VerticalContentAlignment ="Center" HorizontalContentAlignment ="Center" IsEnabled="False"/>
+        <Label x:Name="labConsigne" Content="Choisissez la couleur de votre serpent" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontSize="30" VerticalContentAlignment ="Center" HorizontalContentAlignment ="Center" Width="550" Height="145" Canvas.Left="685" Canvas.Top="47"/>
+        <Button x:Name="butJouer" Content="Jouer" HorizontalAlignment="Left" VerticalAlignment="Top" Height="78" Width="308" FontSize="20" VerticalContentAlignment ="Center" HorizontalContentAlignment ="Center" IsEnabled="False" Canvas.Left="806" Canvas.Top="821"/>
 
-    </Grid>
+    </Canvas>
 </UserControl>
