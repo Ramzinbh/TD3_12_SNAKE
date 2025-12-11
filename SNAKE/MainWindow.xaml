@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SNAKE"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920" WindowState="Maximized">
+        Title="MainWindow" Height="1080" Width="1920" WindowState="Maximized"
+        MinWidth="1440" MinHeight="850">
     <Window.Background>
         <ImageBrush ImageSource="/image/background.jpg"/>
     </Window.Background>

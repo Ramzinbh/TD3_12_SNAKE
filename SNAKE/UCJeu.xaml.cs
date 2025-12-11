@@ -32,6 +32,7 @@ namespace SNAKE
             InitializeTimer();
         }
         int[,] map = new int[22, 22];
+        Image[,] mapImage = new Image[22, 22];
         private void InitializeMap()
         {
             for (int i = 0; i < map.GetLength(0); i++)
@@ -55,8 +56,8 @@ namespace SNAKE
 
         private void InitializeImages()
         {
-            string nomFichierCouleur = $"pack://application:,,,/image/bleu.jpg";
-            caseSerpent = new BitmapImage(new Uri(nomFichierCouleur));
+            string nomFichierCouleur = $"pack://application:,,,/image/{CouleurSerpent}.jpg";
+            BitmapImage caseSerpent = new BitmapImage(new Uri(nomFichierCouleur));
         }
 
         private void InitializeTimer()
@@ -78,11 +79,34 @@ namespace SNAKE
                 {
                     if (map[i, j] == 1)
                     {
-                        //affiche le serpent
+                        mapImage[i, j] = caseSerpent;
+                        Canvas.SetLeft(mapImage[i, j],(j + 1) * 23);
+                        Canvas.SetTop(mapImage[i, j], (i + 1) * 23);
                     }
 
                 }
             }
+            
+        }
+
+        private void OrientationDroite(int pos)
+        {
+            Canvas.SetLeft(caseSerpent, (pos + 1) * 23);
+        }
+
+        private void OrientationGauche(int pos)
+        {
+            Canvas.SetRight(caseSerpent, (pos + 1) * 23);
+        }
+
+        private void OrientationHaut(int pos)
+        {
+            Canvas.SetBottom(caseSerpent, (pos + 1) * 23);
+        }
+
+        private void OrientationBas(int pos)
+        {
+            Canvas.SetTop(caseSerpent, (pos + 1) * 23);
         }
     }
 }

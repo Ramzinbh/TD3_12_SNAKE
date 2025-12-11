@@ -9,8 +9,8 @@
     <Grid>
         <Image Source="/image/logoSnake.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="319" Stretch="Fill" Width="422"/>
         <Label Content="Manges le plus de pommes en évitant les obstacles" HorizontalAlignment="Center" Margin="0,250,0,0" VerticalAlignment="Top" Width="1100" Height="128" FontSize="48" Foreground="White"/>
-        <Image Margin="633,323,639,287" Source="/image/serpend.gif"/>
-        <Button x:Name="butDemarrer" Content="Démarrer" HorizontalAlignment="Center" Margin="0,640,0,0" VerticalAlignment="Top" Height="131" Width="314" FontSize="50"/>
+        <Image Source="/image/serpend.gif" HorizontalAlignment="Center" VerticalAlignment="Center" Width="500" Height="300"/>
+        <Button x:Name="butDemarrer" Content="Démarrer" HorizontalAlignment="Center" Margin="0,640,0,0" VerticalAlignment="Center" Height="131" Width="314" FontSize="50"/>
 
     </Grid>
 </UserControl>
