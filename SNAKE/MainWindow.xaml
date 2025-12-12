@@ -6,4 +6,5 @@
         xmlns:local="clr-namespace:SNAKE"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" WindowState="Maximized" ResizeMode="NoResize">
+    <ContentControl x:Name="ZoneJeu" />
 </Window>
