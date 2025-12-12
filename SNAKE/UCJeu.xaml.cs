@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Threading;
 
 namespace SNAKE
 {
@@ -21,19 +20,9 @@ namespace SNAKE
     /// </summary>
     public partial class UCJeu : UserControl
     {
-        private static DispatcherTimer minuterie;
         public UCJeu()
         {
             InitializeComponent();
-            InitTimer();
-        }
-        private void InitTimer()
-        {
-            minuterie = new DispatcherTimer();
-            minuterie.Interval = TimeSpan.FromMilliseconds(16);
-            // associe l’appel de la méthode Jeu à la fin de la minuterie
-            minuterie.Tick += Jeu;
-            minuterie.Start();
         }
     }
 }

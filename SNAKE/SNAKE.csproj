@@ -9,10 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="UCJeu.xaml.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="images\fondBouton.png" />
     <None Remove="images\serpentRouge.png" />
     <None Remove="images\serpentRougeJeu_0.png" />
@@ -33,7 +29,6 @@
     <Resource Include="images\serpentVertJeu_0.png" />
     <Resource Include="images\serpentVertJeu_1.png" />
     <Resource Include="images\titreMenu.png" />
-    <Resource Include="UCJeu.xaml.cs" />
   </ItemGroup>
 
 </Project>
