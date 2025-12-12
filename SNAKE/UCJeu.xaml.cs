@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace SNAKE
 {
@@ -22,7 +23,7 @@ namespace SNAKE
     public partial class UCJeu : UserControl
     {
         private static DispatcherTimer minuterie;
-        private BitmapImage[] persos = new BitmapImage[2];
+        private static BitmapImage[] persos = new BitmapImage[2];
         public static string CouleurSerpent { get; set; }
         public UCJeu()
         {
@@ -33,7 +34,7 @@ namespace SNAKE
         private void InitializeImages()
         {
             for (int i = 0; i < persos.Length; i++)
-                persos[i] = new BitmapImage(new Uri($"pack://application:,,,/images/serpent{CouleurSerpent}_{i + 1}.gif"));
+                persos[i] = new BitmapImage(new Uri($"pack://application:,,,/images/serpent{CouleurSerpent}Jeu_{i + 1}.png"));
         }
 
         private void InitializeTimer()
