@@ -22,17 +22,18 @@ namespace SNAKE
     public partial class UCJeu : UserControl
     {
         private DispatcherTimer minuterie;
-        public static string CouleurSerpent { get; set; }
+        public static Color CouleurSerpent { get; set; }
         public UCJeu()
         {
             InitializeComponent();
             InitializeMap();
             InitializeSerpent();
-            InitializeImages();
             InitializeTimer();
         }
+
+        int pixel = 23;
         int[,] map = new int[22, 22];
-        Image[,] mapImage = new Image[22, 22];
+        
         private void InitializeMap()
         {
             for (int i = 0; i < map.GetLength(0); i++)
@@ -54,22 +55,18 @@ namespace SNAKE
             }
         }
 
-        private void InitializeImages()
-        {
-            string nomFichierCouleur = $"pack://application:,,,/image/{CouleurSerpent}.jpg";
-            BitmapImage caseSerpent = new BitmapImage(new Uri(nomFichierCouleur));
-        }
-
         private void InitializeTimer()
         {
             minuterie = new DispatcherTimer();
             // configure l'intervalle du Timer :62 images par s
-            minuterie.Interval = TimeSpan.FromMilliseconds(6);
+            minuterie.Interval = TimeSpan.FromMilliseconds(16);
             // associe l’appel de la méthode Jeu à la fin de la minuterie
             minuterie.Tick += Jeu;
             // lancement du timer
             minuterie.Start();
         }
+
+        string orientation = "droite";
 
         private void Jeu(object? sender, EventArgs e)
         {
@@ -79,34 +76,30 @@ namespace SNAKE
                 {
                     if (map[i, j] == 1)
                     {
-                        mapImage[i, j] = caseSerpent;
-                        Canvas.SetLeft(mapImage[i, j],(j + 1) * 23);
-                        Canvas.SetTop(mapImage[i, j], (i + 1) * 23);
+                        CaseSerpend(i, j);
+                        for (int k = 0; k < listSerpent.Count -1; k++)
+                        {
+                            listSerpent[k] = listSerpent[k + 1];
+                        }
+                        listSerpent[listSerpent.Count -1 ][1] += 1;
                     }
-
                 }
             }
-            
         }
 
-        private void OrientationDroite(int pos)
+        private void CaseSerpend(int i, int j)
         {
-            Canvas.SetLeft(caseSerpent, (pos + 1) * 23);
-        }
 
-        private void OrientationGauche(int pos)
-        {
-            Canvas.SetRight(caseSerpent, (pos + 1) * 23);
-        }
+            var cases = new Rectangle
+            {
+                Width = pixel,
+                Height = pixel,
+                Fill = new SolidColorBrush(Colors.Blue)
+            };
 
-        private void OrientationHaut(int pos)
-        {
-            Canvas.SetBottom(caseSerpent, (pos + 1) * 23);
-        }
-
-        private void OrientationBas(int pos)
-        {
-            Canvas.SetTop(caseSerpent, (pos + 1) * 23);
-        }
+            Canvas.SetLeft(cases, j * pixel); // X
+            Canvas.SetTop(cases, i * pixel);  // Y
+            canvasJeu.Children.Add(cases);
+        }            
     }
 }
