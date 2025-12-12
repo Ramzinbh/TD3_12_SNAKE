@@ -34,7 +34,7 @@ namespace SNAKE
         private void InitializeImages()
         {
             for (int i = 0; i < persos.Length; i++)
-                persos[i] = new BitmapImage(new Uri($"pack://application:,,,/images/serpent{CouleurSerpent}Jeu_{i + 1}.png"));
+                persos[i] = new BitmapImage(new Uri($"pack://application:,,,/images/serpent{CouleurSerpent}Jeu_{i}.png"));
         }
 
         private void InitializeTimer()
