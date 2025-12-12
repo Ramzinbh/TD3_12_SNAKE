@@ -21,6 +21,7 @@ namespace SNAKE
     /// </summary>
     public partial class UCJeu : UserControl
     {
+        public static readonly int pixel = 23;
         private DispatcherTimer minuterie;
         public static Color CouleurSerpent { get; set; }
         public UCJeu()
