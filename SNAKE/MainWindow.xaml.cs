@@ -21,27 +21,14 @@ namespace SNAKE
         {
             InitializeComponent();
             AfficheRegleJeu();
-            
-            
         }
 
-        
         private void AfficheRegleJeu()
         {
             UCReglesJeu uc = new UCReglesJeu();
             // associe l'écran au conteneur
             ZoneJeu.Content = uc;
             uc.butDemarrer.Click += AfficheChoixPerso;
-        }
-
-        
-
-        
-
-
-        private void Jeu(object? sender, EventArgs e)
-        {
-
         }
 
         private void AfficheChoixPerso(object sender, RoutedEventArgs e)

@@ -7,8 +7,5 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="1080" Width="1920" WindowState="Maximized"
         MinWidth="1440" MinHeight="850">
-    <Window.Background>
-        <ImageBrush ImageSource="/image/background.jpg"/>
-    </Window.Background>
     <ContentControl x:Name="ZoneJeu" />
 </Window>
