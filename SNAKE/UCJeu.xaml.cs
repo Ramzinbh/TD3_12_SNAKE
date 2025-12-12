@@ -19,21 +19,50 @@ namespace SNAKE
     /// <summary>
     /// Logique d'interaction pour UCJeu.xaml
     /// </summary>
+    
     public partial class UCJeu : UserControl
     {
         private static DispatcherTimer minuterie;
+        private BitmapImage[] persos = new BitmapImage[2];
+        public static string CouleurSerpent { get; set; }
         public UCJeu()
         {
             InitializeComponent();
-            InitTimer();
+            InitializeImages();
+            InitializeTimer();
         }
-        private void InitTimer()
+        private void InitializeImages()
         {
-            minuterie = new DispatcherTimer();
+            for (int i = 0; i < persos.Length; i++)
+                persos[i] = new BitmapImage(new Uri($"pack://application:,,,/images/serpent{CouleurSerpent}_{i + 1}.gif"));
+        }
+
+        private void InitializeTimer()
+        {
+           minuterie = new DispatcherTimer();
             minuterie.Interval = TimeSpan.FromMilliseconds(16);
             // associe l’appel de la méthode Jeu à la fin de la minuterie
             minuterie.Tick += Jeu;
             minuterie.Start();
         }
+
+        private int nb = 0;
+
+        private void Jeu(object? sender, EventArgs e)
+        {
+            Canvas.SetTop(imgFond1, Canvas.GetTop(imgFond1) - 2);
+            if (Canvas.GetTop(imgFond1) + imgFond1.Height <= 0)
+                Canvas.SetTop(imgFond1, 800);
+            Canvas.SetTop(imgFond2, Canvas.GetTop(imgFond2) - 2);
+            if (Canvas.GetTop(imgFond2) + imgFond1.Height <= 0)
+                Canvas.SetTop(imgFond2, 800);
+            nb++;
+            if (nb == 2)
+            {
+                nb = 0;
+            }
+            serpent.Source = persos[nb];
+        }
     }
 }
+

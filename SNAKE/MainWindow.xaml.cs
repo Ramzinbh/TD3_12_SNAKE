@@ -17,7 +17,6 @@ namespace SNAKE
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static string CouleurSerpent { get; set; }
         public MainWindow()
         {
             InitializeComponent();
