@@ -7,8 +7,16 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="532,0,0,0" VerticalAlignment="Center"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="222,218,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbVert" Width="150" Height="150" Margin="108,150,542,150" Click="rbVert_Click" >
+            <RadioButton.Content>
+                <Image Source="images/serpentVert.png" Width="126" Height="139"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton x:Name="rbRouge" Width="150" Height="150" Margin="526,150,124,150" Click="rbRouge_Click" >
+            <RadioButton.Content>
+                <Image Source="images/serpentRouge.png" Width="126" Height="139"/>
+            </RadioButton.Content>
+        </RadioButton>
         <Button x:Name="butJouer" Content="Jouer" HorizontalAlignment="Center" Margin="0,328,0,0" VerticalAlignment="Top" Height="55" Width="144" FontWeight="Bold" FontSize="24" Foreground="#FF047500" Background="#FF232323"/>
         <Label Content="CHOIX DU SKIN" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" Width="366" FontWeight="Bold" Height="72" FontSize="48" Foreground="#FF047500"/>
 

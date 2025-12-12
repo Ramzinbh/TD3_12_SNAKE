@@ -24,5 +24,18 @@ namespace SNAKE
         {
             InitializeComponent();
         }
+
+
+        private void rbVert_Click(object sender, RoutedEventArgs e)
+        {
+            butJouer.IsEnabled = true;
+            MainWindow.CouleurSerpent = "Vert";
+        }
+
+        private void rbRouge_Click(object sender, RoutedEventArgs e)
+        {
+            butJouer.IsEnabled = true;
+            MainWindow.CouleurSerpent = "Rouge";
+        }
     }
 }
