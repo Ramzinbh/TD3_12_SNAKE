@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:SNAKE"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Canvas x:Name="canvasJeu" Loaded="UserControl_Loaded">
+    <Canvas x:Name="canvasJeu">
             
     </Canvas>
 </UserControl>
