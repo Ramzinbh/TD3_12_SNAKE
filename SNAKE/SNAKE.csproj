@@ -8,4 +8,19 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="UCJeu.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="images\serpentRouge.png" />
+    <None Remove="images\serpentVert.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\serpentRouge.png" />
+    <Resource Include="images\serpentVert.png" />
+    <Resource Include="UCJeu.xaml.cs" />
+  </ItemGroup>
+
 </Project>
