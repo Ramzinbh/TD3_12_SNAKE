@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:SNAKE"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Canvas0>
-            
-    </Canvas0>
+    <Canvas x:Name="canvasJeu">
+        <Image Source="/images/fondJeu.jpg" HorizontalAlignment="Center" Canvas.Top="-751" VerticalAlignment="Top" Height="1201" Width="800" />
+        <Image Source="/images/fondJeu.jpg" Canvas.Top="-1952" Height="1201" Width="800" HorizontalAlignment="Center" VerticalAlignment="Top" />
+
+    </Canvas>
 </UserControl>
