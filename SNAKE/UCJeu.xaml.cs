@@ -54,11 +54,19 @@ namespace SNAKE
             Deplace(imgFond1, pasFond);
             Deplace(imgFond2, pasFond);
             nb++;
-            if (nb == 2)
+            if (nb == 16)
             {
                 nb = 0;
             }
-            serpent.Source = persos[nb];
+            if (nb < 8)
+            {
+                serpent.Source = persos[0];
+            }
+            else
+            {
+                serpent.Source = persos[1];
+            }
+            
         }
         
 
@@ -111,7 +119,7 @@ namespace SNAKE
 
             }
 #if DEBUG
-            Console.WriteLine("Position Left pere noel :" + Canvas.GetLeft(serpent));
+            Console.WriteLine("Position Left serpent :" + Canvas.GetLeft(serpent));
 #endif
         }
     }

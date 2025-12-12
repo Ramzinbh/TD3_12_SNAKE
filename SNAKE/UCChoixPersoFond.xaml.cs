@@ -37,5 +37,17 @@ namespace SNAKE
             butJouer.IsEnabled = true;
             UCJeu.CouleurSerpent = "Rouge";
         }
+
+        private void rbNoiretBlanc_Click(object sender, RoutedEventArgs e)
+        {
+            butJouer.IsEnabled = true;
+            UCJeu.CouleurSerpent = "Noiretblanc";
+        }
+
+        private void rbBleu_Click(object sender, RoutedEventArgs e)
+        {
+            butJouer.IsEnabled = true;
+            UCJeu.CouleurSerpent = "Bleu";
+        }
     }
 }

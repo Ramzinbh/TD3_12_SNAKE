@@ -10,14 +10,24 @@
         <Grid.Background>
             <ImageBrush ImageSource="images/backgroundMenu.png"/>
         </Grid.Background>
-        <RadioButton x:Name="rbVert" Height="150" Margin="88,150,489,150" Click="rbVert_Click" >
+        <RadioButton x:Name="rbVert" Height="150" Margin="88,50,489,250" Click="rbVert_Click" >
             <RadioButton.Content>
                 <Image Source="images/serpentVert.png" Width="208" Height="138" Stretch="UniformToFill"/>
             </RadioButton.Content>
         </RadioButton>
-        <RadioButton x:Name="rbRouge" Margin="481,150,90,150" Click="rbRouge_Click" >
+        <RadioButton x:Name="rbRouge" Margin="478,50,93,250" Click="rbRouge_Click" >
             <RadioButton.Content>
                 <Image Source="images/serpentRouge.png" Width="210" Height="139" Stretch="UniformToFill"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton x:Name="rbNoiretBlanc" Height="150" Margin="484,200,93,100" Click="rbNoiretBlanc_Click" >
+            <RadioButton.Content>
+                <Image Source="images/serpentNoiretBlanc.png" Width="208" Height="138" Stretch="UniformToFill"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton x:Name="rbBleu" Height="150" Margin="88,200,489,100" Click="rbBleu_Click" >
+            <RadioButton.Content>
+                <Image Source="images/serpentBleu.png" Width="208" Height="138" Stretch="UniformToFill"/>
             </RadioButton.Content>
         </RadioButton>
         <Button x:Name="butJouer" Content="Jouer" HorizontalAlignment="Center" Margin="0,314,0,0" VerticalAlignment="Top" Height="87" Width="200" FontWeight="Bold" FontSize="24" Foreground="#FF047500" IsEnabled="False">

@@ -12,6 +12,9 @@
     <None Remove="images\aigle.png" />
     <None Remove="images\fondBouton.png" />
     <None Remove="images\fondJeu.jpg" />
+    <None Remove="images\serpentBleu.png" />
+    <None Remove="images\serpentBleuJeu_0.png" />
+    <None Remove="images\serpentBleuJeu_1.png" />
     <None Remove="images\serpentRouge.png" />
     <None Remove="images\serpentRougeJeu_0.png" />
     <None Remove="images\serpentRougeJeu_1.png" />
@@ -26,6 +29,12 @@
     <Resource Include="images\backgroundMenu.png" />
     <Resource Include="images\fondBouton.png" />
     <Resource Include="images\fondJeu.jpg" />
+    <Resource Include="images\serpentBleu.png" />
+    <Resource Include="images\serpentBleuJeu_0.png" />
+    <Resource Include="images\serpentBleuJeu_1.png" />
+    <Resource Include="images\serpentNoiretblancJeu_0.png" />
+    <Resource Include="images\serpentNoiretBlanc.png" />
+    <Resource Include="images\serpentNoiretblancJeu_1.png" />
     <Resource Include="images\serpentRouge.png" />
     <Resource Include="images\serpentRougeJeu_0.png" />
     <Resource Include="images\serpentRougeJeu_1.png" />
