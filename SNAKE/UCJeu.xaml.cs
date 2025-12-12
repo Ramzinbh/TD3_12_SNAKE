@@ -105,7 +105,7 @@ namespace SNAKE
                         //image.Width = pixel;
                         //image.Height = pixel;
                         //image.Stretch = Stretch.Fill;
-                        
+
 
                         //// Ajout de l'image au Canvas
                         //canvasJeu.Children.Add(image);
