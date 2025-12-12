@@ -14,12 +14,20 @@
 
   <ItemGroup>
     <None Remove="images\serpentRouge.png" />
+    <None Remove="images\serpentRougeJeu_0.png" />
+    <None Remove="images\serpentRougeJeu_1.png" />
     <None Remove="images\serpentVert.png" />
+    <None Remove="images\serpentVertJeu_0.png" />
+    <None Remove="images\serpentVertJeu_1.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="images\serpentRouge.png" />
+    <Resource Include="images\serpentRougeJeu_0.png" />
+    <Resource Include="images\serpentRougeJeu_1.png" />
     <Resource Include="images\serpentVert.png" />
+    <Resource Include="images\serpentVertJeu_0.png" />
+    <Resource Include="images\serpentVertJeu_1.png" />
     <Resource Include="UCJeu.xaml.cs" />
   </ItemGroup>
 
