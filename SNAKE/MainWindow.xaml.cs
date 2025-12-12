@@ -17,6 +17,7 @@ namespace SNAKE
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static int PasSerpent { get; set; } = 5;
         public MainWindow()
         {
             InitializeComponent();
