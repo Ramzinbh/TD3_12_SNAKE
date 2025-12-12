@@ -9,7 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="images\aigle.png" />
     <None Remove="images\fondBouton.png" />
+    <None Remove="images\fondJeu.jpg" />
     <None Remove="images\serpentRouge.png" />
     <None Remove="images\serpentRougeJeu_0.png" />
     <None Remove="images\serpentRougeJeu_1.png" />
@@ -20,8 +22,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="images\aigle.png" />
     <Resource Include="images\backgroundMenu.png" />
     <Resource Include="images\fondBouton.png" />
+    <Resource Include="images\fondJeu.jpg" />
     <Resource Include="images\serpentRouge.png" />
     <Resource Include="images\serpentRougeJeu_0.png" />
     <Resource Include="images\serpentRougeJeu_1.png" />
