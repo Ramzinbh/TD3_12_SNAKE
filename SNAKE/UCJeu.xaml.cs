@@ -22,7 +22,6 @@ namespace SNAKE
     
     public partial class UCJeu : UserControl
     {
-        private static int pasFond = 2;
         private static DispatcherTimer minuterie;
         private static BitmapImage[] persos = new BitmapImage[2];
         public static string CouleurSerpent { get; set; }
@@ -51,8 +50,8 @@ namespace SNAKE
 
         private void Jeu(object? sender, EventArgs e)
         {
-            Deplace(imgFond1, pasFond);
-            Deplace(imgFond2, pasFond);
+            Deplace(imgFond1, MainWindow.PasFond);
+            Deplace(imgFond2, MainWindow.PasFond);
             nb++;
             if (nb == 16)
             {
@@ -86,30 +85,39 @@ namespace SNAKE
 
         private void canvasJeu_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Right)
+            if (Keyboard.IsKeyDown(Key.Right))
             {
                 if ((Canvas.GetLeft(serpent) + MainWindow.PasSerpent) <= (canvasJeu.ActualWidth - serpent.ActualWidth))
+                {
                     Canvas.SetLeft(serpent, Canvas.GetLeft(serpent) + MainWindow.PasSerpent);
+                }
             }
-            else if (e.Key == Key.Left)
+            if (Keyboard.IsKeyDown(Key.Left))
             {
                 if ((Canvas.GetLeft(serpent) - MainWindow.PasSerpent) >= 0)
+                {
                     Canvas.SetLeft(serpent, Canvas.GetLeft(serpent) - MainWindow.PasSerpent);
+                }
             }
-            else if (e.Key == Key.Up)
+            if (Keyboard.IsKeyDown(Key.Up))
             {
-                //faire mouvement serpent haut
+                if ((Canvas.GetTop(serpent) - MainWindow.PasSerpent) >= 0)
+                {
+                    Canvas.SetTop(serpent, Canvas.GetTop(serpent) - MainWindow.PasSerpent);
+                }
             }
-            else if (e.Key == Key.Down)
+            if (Keyboard.IsKeyDown(Key.Down))
             {
-                //faire mouvement serpent bas
+                if ((Canvas.GetTop(serpent) + MainWindow.PasSerpent) <= (canvasJeu.ActualHeight - serpent.ActualHeight))
+                {
+                    Canvas.SetTop(serpent, Canvas.GetTop(serpent) + MainWindow.PasSerpent);
+                }
             }
-            else if (e.Key == Key.Space)
+            if (e.Key == Key.Space)
             {
                 if (minuterie.IsEnabled)
                 {
                     minuterie.Stop();
-
                 }
 
                 else
@@ -121,6 +129,33 @@ namespace SNAKE
 #if DEBUG
             Console.WriteLine("Position Left serpent :" + Canvas.GetLeft(serpent));
 #endif
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            minuterie.Stop();
+            ParametreWindow parametreWindow = new ParametreWindow();
+            bool? rep = parametreWindow.ShowDialog();
+            if (rep == true)
+            {
+                minuterie.Start();
+                MainWindow.vitesse = parametreWindow.slidVitesse.Value;
+
+                // ATTENTION : LES PAS DOIVENT ETRE DES MULTIPLES
+                // DE LA TAILLE DE L’IMAGE A DEPLACER
+                if (MainWindow.vitesse == 2)
+                {
+                    MainWindow.PasSerpent = 10;
+                }
+                else if (MainWindow.vitesse == 1)
+                {
+                    MainWindow.PasSerpent = 5;
+                }
+                else if (MainWindow.vitesse == 3)
+                {
+                    MainWindow.vitesse = 15;
+                }
+            }
         }
     }
 }

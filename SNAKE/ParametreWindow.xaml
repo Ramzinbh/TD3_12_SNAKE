@@ -1,0 +1,35 @@
+﻿<Window x:Class="SNAKE.ParametreWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SNAKE"
+        mc:Ignorable="d"
+        Title="ParametreWindow" Height="250" Width="400" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Vitesse" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="15" FontWeight="Bold"/>
+        <Slider x:Name="slidVitesse" Width="120" Minimum="1"
+         Maximum="3"
+         Value="2"
+         TickFrequency="1"
+         IsSnapToTickEnabled="True"
+         TickPlacement="BottomRight"
+         AutoToolTipPlacement="BottomRight"
+         HorizontalAlignment="Center"
+         Margin="0,45,0,145" RenderTransformOrigin="0.506,0.757"/>
+        <Label Content="Difficulté" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"/>
+        <Slider x:Name="slidDifficulte" Width="120" Minimum="1"
+         Maximum="3"
+         Value="2"
+         TickFrequency="1"
+         IsSnapToTickEnabled="True"
+         TickPlacement="BottomRight"
+         AutoToolTipPlacement="BottomRight"
+         HorizontalAlignment="Center"
+         Margin="0,137,0,53" RenderTransformOrigin="0.506,0.757"/>
+        <Button x:Name="butValider" Content="Valider" HorizontalAlignment="Left" Margin="110,190,0,0" VerticalAlignment="Top" Click="butValider_Click"/>
+        <Button x:Name="butAnnuler" Content="Annuler" HorizontalAlignment="Left" Margin="260,190,0,0" VerticalAlignment="Top" Click="butAnnuler_Click"/>
+        <Button x:Name="butTriche" Content="Triche ??" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom" RenderTransformOrigin="0.615,0.568" Height="15" Width="35" FontSize="8" IsEnabled="False"/>
+
+    </Grid>
+</Window>

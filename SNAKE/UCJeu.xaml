@@ -6,9 +6,19 @@
              xmlns:local="clr-namespace:SNAKE"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Canvas x:Name="canvasJeu" Loaded="UserControl_Loaded">
-        <Image x:Name="imgFond1" Source="/images/fondJeu.jpg" HorizontalAlignment="Center" Canvas.Bottom="0" VerticalAlignment="Top" Height="1201" Width="800" />
-        <Image x:Name="imgFond2" Source="/images/fondJeu.jpg" Canvas.Bottom="1201" Height="1201" Width="800" HorizontalAlignment="Center" VerticalAlignment="Top" />
-        <Image x:Name="serpent" Height="135" Canvas.Left="364" Source="/images/serpentVertJeu_0.png" Stretch="Fill" Canvas.Bottom="20" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-    </Canvas>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Canvas x:Name="canvasJeu" Loaded="UserControl_Loaded" Grid.RowSpan="2">
+            <Image x:Name="imgFond1" Source="/images/fondJeu.jpg" HorizontalAlignment="Center" Canvas.Bottom="0" VerticalAlignment="Top" Height="1201" Width="800" />
+            <Image x:Name="imgFond2" Source="/images/fondJeu.jpg" Canvas.Bottom="1201" Height="1201" Width="800" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Image x:Name="serpent" Height="135" Canvas.Left="364" Source="/images/serpentVertJeu_0.png" Stretch="Fill" Canvas.Top="285" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        </Canvas>
+        <Menu Height="20" Width="800" Grid.Row="0">
+            <MenuItem Header="_Parametre" Click="MenuItem_Click"/>
+        </Menu>
+    </Grid>
 </UserControl>
