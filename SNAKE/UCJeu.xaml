@@ -13,8 +13,8 @@
         </Grid.RowDefinitions>
         
         <Canvas x:Name="canvasJeu" Loaded="UserControl_Loaded" Grid.RowSpan="2">
-            <Image x:Name="imgFond1" Source="/images/fondJeu.jpg" HorizontalAlignment="Center" Canvas.Bottom="0" VerticalAlignment="Top" Height="1201" Width="800" />
-            <Image x:Name="imgFond2" Source="/images/fondJeu.jpg" Canvas.Bottom="1201" Height="1201" Width="800" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Image x:Name="imgFond1" Source="/images/fondJeu.jpg" HorizontalAlignment="Center" Canvas.Bottom="0" VerticalAlignment="Top" Height="1200" Width="800" />
+            <Image x:Name="imgFond2" Source="/images/fondJeu.jpg" Canvas.Bottom="1200" Height="1200" Width="800" HorizontalAlignment="Center" VerticalAlignment="Top" />
             <Image x:Name="serpent" Height="135" Canvas.Left="364" Source="/images/serpentVertJeu_0.png" Stretch="Fill" Canvas.Top="285" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </Canvas>
         <Menu Height="20" Width="800" Grid.Row="0">
