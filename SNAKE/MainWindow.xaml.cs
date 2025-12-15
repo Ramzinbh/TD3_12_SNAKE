@@ -19,6 +19,7 @@ namespace SNAKE
     {
         public static double vitesse;
         public static double difficulte;
+        public static int PasPomme { get; set; } = 3;
         public static int PasAigle { get; set; } = 5;
         public static int PasFond { get; set; } = 2;
         public static int PasSerpent { get; set; } = 10;
@@ -43,6 +44,20 @@ namespace SNAKE
             ZoneJeu.Content = uc;
             uc.butJouer.Click += AfficheJeu;
         }
+
+        public void AfficheGameOver()
+        {
+            ZoneJeu.Content = new UCGameOver();
+        }
+
+        public void Jeu(object sender, RoutedEventArgs e)
+        {
+            UCJeu jeu = new UCJeu();
+            jeu.GameOverEvent += AfficheGameOver;
+            ZoneJeu.Content=jeu;
+        }
+
+        
 
         private void AfficheJeu(object sender, RoutedEventArgs e)
         {
