@@ -22,6 +22,7 @@ namespace SNAKE
     
     public partial class UCJeu : UserControl
     {
+        private static Random rand = new Random();
         private static DispatcherTimer minuterie;
         private static BitmapImage[] persos = new BitmapImage[2];
         public static string CouleurSerpent { get; set; }
@@ -65,7 +66,14 @@ namespace SNAKE
             {
                 serpent.Source = persos[1];
             }
-            
+            if (Canvas.GetTop(imgAigle) < canvasJeu.ActualHeight)
+                Canvas.SetTop(imgAigle, Canvas.GetTop(imgAigle) + MainWindow.PasAigle);
+            else
+            {
+                Canvas.SetTop(imgAigle, -imgAigle.ActualHeight);
+                Canvas.SetLeft(imgAigle, rand.Next(0, (int)canvasJeu.ActualWidth - (int)imgAigle.ActualWidth));
+            }
+            Console.WriteLine("Position Top du cadeau :" + Canvas.GetTop(imgAigle));
         }
         
 
@@ -101,7 +109,7 @@ namespace SNAKE
             }
             if (Keyboard.IsKeyDown(Key.Up))
             {
-                if ((Canvas.GetTop(serpent) - MainWindow.PasSerpent) >= 0)
+                if ((Canvas.GetTop(serpent) - MainWindow.PasSerpent) >= this.menuJeu.ActualHeight)
                 {
                     Canvas.SetTop(serpent, Canvas.GetTop(serpent) - MainWindow.PasSerpent);
                 }
@@ -113,7 +121,7 @@ namespace SNAKE
                     Canvas.SetTop(serpent, Canvas.GetTop(serpent) + MainWindow.PasSerpent);
                 }
             }
-            if (e.Key == Key.Space)
+            if (e.Key == Key.P)
             {
                 if (minuterie.IsEnabled)
                 {
@@ -153,7 +161,7 @@ namespace SNAKE
                 }
                 else if (MainWindow.vitesse == 3)
                 {
-                    MainWindow.vitesse = 15;
+                    MainWindow.PasSerpent = 15;
                 }
             }
         }

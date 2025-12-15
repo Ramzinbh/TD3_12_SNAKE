@@ -11,14 +11,16 @@
             <RowDefinition Height="20"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
+
         <Canvas x:Name="canvasJeu" Loaded="UserControl_Loaded" Grid.RowSpan="2">
             <Image x:Name="imgFond1" Source="/images/fondJeu.jpg" HorizontalAlignment="Center" Canvas.Bottom="0" VerticalAlignment="Top" Height="1200" Width="800" />
             <Image x:Name="imgFond2" Source="/images/fondJeu.jpg" Canvas.Bottom="1200" Height="1200" Width="800" HorizontalAlignment="Center" VerticalAlignment="Top" />
-            <Image x:Name="serpent" Height="135" Canvas.Left="364" Source="/images/serpentVertJeu_0.png" Stretch="Fill" Canvas.Top="285" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Image x:Name="serpent" Height="120" Canvas.Left="385" Source="/images/serpentVertJeu_0.png" Stretch="Fill" Canvas.Top="290" Width="30" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Image x:Name="imgAigle" Source="/images/aigle.png" Stretch="UniformToFill" Height="45" Canvas.Left="216" Canvas.Top="-60" Width="65"/>
         </Canvas>
-        <Menu Height="20" Width="800" Grid.Row="0">
+        <Menu x:Name="menuJeu" Height="20" Width="800" Grid.Row="0">
             <MenuItem Header="_Parametre" Click="MenuItem_Click"/>
         </Menu>
+
     </Grid>
 </UserControl>
