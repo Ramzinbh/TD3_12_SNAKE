@@ -55,13 +55,9 @@ namespace SNAKE
             Deplace(imgFond2, MainWindow.PasFond);
             nb++;
             if (nb == 16)
-            {
                 nb = 0;
-            }
             if (nb < 8)
-            {
                 serpent.Source = persos[0];
-            }
             else
             {
                 serpent.Source = persos[1];
