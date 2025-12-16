@@ -83,7 +83,7 @@ namespace SNAKE
             }
             if (Collision(imgAigle2, serpent) == true)
             {
-                this.GameOverEvent?.Invoke();
+                GameOverEvent?.Invoke();
                 minuterie.Stop();
             }
             if (Collision(imgPomme, serpent) == true)
@@ -134,7 +134,7 @@ namespace SNAKE
             Application.Current.MainWindow.KeyDown += canvasJeu_KeyDown;
             //    Application.Current.MainWindow.KeyUp += canvasJeu_KeyUp;
         }
-
+        private bool enPause;
         private void canvasJeu_KeyDown(object sender, KeyEventArgs e)
         {
             if (Keyboard.IsKeyDown(Key.Right))
@@ -165,18 +165,23 @@ namespace SNAKE
                     Canvas.SetTop(serpent, Canvas.GetTop(serpent) + MainWindow.PasSerpent);
                 }
             }
+
             if (e.Key == Key.P)
             {
-                if (minuterie.IsEnabled)
+                enPause = !enPause; // On inverse (Vrai devient Faux, et inversement).
+
+                // On affiche ou cache le texte PAUSE.
+                if (enPause == true)
                 {
+                    txtPause.Visibility = Visibility.Visible;
                     minuterie.Stop();
                 }
-
                 else
                 {
+                    txtPause.Visibility = Visibility.Collapsed;
                     minuterie.Start();
                 }
-
+                return; // On arrête là, on ne bouge pas si on met pause.
             }
 #if DEBUG
             Console.WriteLine("Position Left serpent :" + Canvas.GetLeft(serpent));

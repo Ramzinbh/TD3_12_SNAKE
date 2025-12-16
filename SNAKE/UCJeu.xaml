@@ -20,6 +20,7 @@
             <Image x:Name="imgAigle2" Source="/images/aigle.png" Stretch="UniformToFill" Height="45" Canvas.Left="568" Canvas.Top="-60" Width="65" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Image x:Name="imgPomme" Source="/images/pomme.png" Height="39" Canvas.Left="414" Canvas.Top="-124" Width="33" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <Label x:Name="lblScore" Content="Score : 0" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="20" Width="100" FontSize="20" FontWeight="Bold"/>
+            <TextBlock x:Name="txtPause" Text="PAUSE" FontSize="60" FontWeight="Bold" Foreground="#FF607B30" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="0" Canvas.Top="0"/>
         </Canvas>
         <Menu x:Name="menuJeu" Height="20" Width="800" Grid.Row="0">
             <MenuItem Header="_Parametre" Click="MenuItem_Click"/>
