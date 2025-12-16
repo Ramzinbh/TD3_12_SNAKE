@@ -20,9 +20,10 @@ namespace SNAKE
         public static double vitesse;
         public static double difficulte;
         public static int score = 0;
+        public static int chances = 3;
         private static MediaPlayer musique;
-        public static int PasPomme { get; set; } = 3;
-        public static int PasAigle { get; set; } = 5;
+        public static int PasPomme { get; set; } = 8;
+        public static int PasAigle { get; set; } = 10;
         public static int PasFond { get; set; } = 2;
         public static int PasSerpent { get; set; } = 10;
         public MainWindow()

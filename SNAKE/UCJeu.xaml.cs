@@ -24,7 +24,7 @@ namespace SNAKE
     
     public partial class UCJeu : UserControl
     {
-        //private static SoundPlayer sonPommeMange;
+        private static SoundPlayer sonPommeMange = new SoundPlayer();
         private static Random rand = new Random();
         private static DispatcherTimer minuterie;
         private static BitmapImage[] persos = new BitmapImage[2];
@@ -36,7 +36,7 @@ namespace SNAKE
             InitializeComponent();
             InitializeImages();
             InitializeTimer();
-            //InitSon();
+            InitSon();
         }
         private void InitializeImages()
         {
@@ -52,10 +52,10 @@ namespace SNAKE
             minuterie.Tick += Jeu;
             minuterie.Start();
         }
-        //private void InitSon()
-        //{
-        //    SoundPlayer sonPommeMange = new SoundPlayer(Application.GetResourceStream(new Uri("pack://application:,,,/sons_musiques/sonPomme.wav")).Stream);
-        //}
+        private void InitSon()
+        {
+            sonPommeMange = new SoundPlayer(Application.GetResourceStream(new Uri("pack://application:,,,/sons_musiques/sonPomme.wav")).Stream);
+        }
 
 
         private int nb = 0;
@@ -86,21 +86,33 @@ namespace SNAKE
                 GameOverEvent?.Invoke();
                 minuterie.Stop();
             }
+            if (MainWindow.chances == 0)
+            {
+                GameOverEvent?.Invoke();
+                minuterie.Stop();
+            }
             if (Collision(imgPomme, serpent) == true)
             {
                 MainWindow.score += 1;
                 MettreAJourAffichage();
                 Canvas.SetTop(imgPomme, -imgPomme.ActualHeight);
                 Canvas.SetLeft(imgPomme, rand.Next(0, (int)canvasJeu.ActualWidth - (int)imgPomme.ActualWidth));
-                //sonPommeMange.Play();
-
+                sonPommeMange.Play();
+                sonPommeMange.Stop();
             }
-            //Console.WriteLine("Position Top du cadeau :" + Canvas.GetTop(imgAigle1));
+            if (Canvas.GetTop(imgPomme) >= canvasJeu.ActualHeight)
+            {
+                MainWindow.chances -= 1;
+                MettreAJourAffichage();
+            }
+            Console.WriteLine("Position Top de l'aigle :" + Canvas.GetTop(imgAigle1));
+            Console.WriteLine("Position Top de la pomme :" + Canvas.GetTop(imgPomme));
         }
 
         private void MettreAJourAffichage()
         {
             lblScore.Content = "Score : " + MainWindow.score.ToString();
+            labChance.Content = "Chances : " + MainWindow.chances.ToString();
         }
 
         public static bool Collision(Image img1, Image img2)
@@ -211,18 +223,18 @@ namespace SNAKE
 
                 if (MainWindow.difficulte == 2)
                 {
-                    MainWindow.PasAigle = 5;
-                    MainWindow.PasPomme = 3;
+                    MainWindow.PasAigle = 10;
+                    MainWindow.PasPomme = 8;
                 }
                 else if(MainWindow.difficulte == 1)
                 {
-                    MainWindow.PasAigle = 3;
-                    MainWindow.PasPomme = 2;
+                    MainWindow.PasAigle = 5;
+                    MainWindow.PasPomme = 4;
                 }
                 else if( MainWindow.difficulte == 3)
                 {
-                    MainWindow.PasAigle = 10;
-                    MainWindow.PasPomme = 5;
+                    MainWindow.PasAigle = 15;
+                    MainWindow.PasPomme = 12;
                 }
                     
             }
