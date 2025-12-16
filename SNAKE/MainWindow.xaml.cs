@@ -20,6 +20,7 @@ namespace SNAKE
         public static double vitesse;
         public static double difficulte;
         public static int score = 0;
+        private static MediaPlayer musique;
         public static int PasPomme { get; set; } = 3;
         public static int PasAigle { get; set; } = 5;
         public static int PasFond { get; set; } = 2;
@@ -28,6 +29,7 @@ namespace SNAKE
         {
             InitializeComponent();
             AfficheRegleJeu();
+            InitMusique();
         }
 
         private void AfficheRegleJeu()
@@ -57,9 +59,19 @@ namespace SNAKE
             jeu.GameOverEvent += AfficheGameOver;
             ZoneJeu.Content=jeu;
         }
-
-        
-
+        private void InitMusique()
+        {
+            musique = new MediaPlayer();
+            musique.Open(new Uri(AppDomain.CurrentDomain.BaseDirectory + "sons_musiques/musiqueUCJeu.mp3"));
+            musique.MediaEnded += RelanceMusique;
+            musique.Volume = 15;
+            musique.Play();
+        }
+        private void RelanceMusique(object? sender, EventArgs e)
+        {
+            musique.Position = TimeSpan.Zero;
+            musique.Play();
+        }
         private void AfficheJeu(object sender, RoutedEventArgs e)
         {
             UCJeu uc = new UCJeu();

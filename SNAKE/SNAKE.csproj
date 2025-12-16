@@ -26,6 +26,8 @@
     <None Remove="images\serpentVertJeu_0.png" />
     <None Remove="images\serpentVertJeu_1.png" />
     <None Remove="images\titreMenu.png" />
+    <None Remove="sons_musiques\sonPomme.mp3" />
+    <None Remove="sons_musiques\sonPomme.wav" />
   </ItemGroup>
 
   <ItemGroup>
@@ -50,6 +52,13 @@
     <Resource Include="images\serpentVertJeu_0.png" />
     <Resource Include="images\serpentVertJeu_1.png" />
     <Resource Include="images\titreMenu.png" />
+    <Resource Include="sons_musiques\sonPomme.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="sons_musiques\musiqueUCJeu.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

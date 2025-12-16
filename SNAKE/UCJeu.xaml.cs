@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +24,7 @@ namespace SNAKE
     
     public partial class UCJeu : UserControl
     {
+        //private static SoundPlayer sonPommeMange;
         private static Random rand = new Random();
         private static DispatcherTimer minuterie;
         private static BitmapImage[] persos = new BitmapImage[2];
@@ -34,6 +36,7 @@ namespace SNAKE
             InitializeComponent();
             InitializeImages();
             InitializeTimer();
+            //InitSon();
         }
         private void InitializeImages()
         {
@@ -49,6 +52,11 @@ namespace SNAKE
             minuterie.Tick += Jeu;
             minuterie.Start();
         }
+        //private void InitSon()
+        //{
+        //    SoundPlayer sonPommeMange = new SoundPlayer(Application.GetResourceStream(new Uri("pack://application:,,,/sons_musiques/sonPomme.wav")).Stream);
+        //}
+
 
         private int nb = 0;
 
@@ -84,6 +92,7 @@ namespace SNAKE
                 MettreAJourAffichage();
                 Canvas.SetTop(imgPomme, -imgPomme.ActualHeight);
                 Canvas.SetLeft(imgPomme, rand.Next(0, (int)canvasJeu.ActualWidth - (int)imgPomme.ActualWidth));
+                //sonPommeMange.Play();
 
             }
             //Console.WriteLine("Position Top du cadeau :" + Canvas.GetTop(imgAigle1));
