@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace SNAKE
 {
@@ -70,18 +71,32 @@ namespace SNAKE
             if (Collision(imgAigle1,serpent) == true)
             {
                 GameOverEvent?.Invoke();
+                minuterie.Stop();
+            }
+            if (Collision(imgAigle2, serpent) == true)
+            {
+                this.GameOverEvent?.Invoke();
+                minuterie.Stop();
+            }
+            if (Collision(imgPomme, serpent) == true)
+            {
+                MainWindow.score += 1;
+                MettreAJourAffichage();
+                Canvas.SetTop(imgPomme, -imgPomme.ActualHeight);
+                Canvas.SetLeft(imgPomme, rand.Next(0, (int)canvasJeu.ActualWidth - (int)imgPomme.ActualWidth));
+
             }
             //Console.WriteLine("Position Top du cadeau :" + Canvas.GetTop(imgAigle1));
         }
+
+        private void MettreAJourAffichage()
+        {
+            lblScore.Content = "Score : " + MainWindow.score.ToString();
+        }
+
         public static bool Collision(Image img1, Image img2)
         {
-            if (Canvas.GetTop(img1) + img1.ActualHeight == Canvas.GetTop(img2))
-                return true;
-            if (Canvas.GetLeft(img1) + img1.ActualWidth == Canvas.GetLeft(img2))
-                return true;
-            if (Canvas.GetRight(img1) + img1.ActualWidth == Canvas.GetRight(img2))
-                return true;
-            if (Canvas.GetBottom(img1) + img1.ActualHeight == Canvas.GetBottom(img2))
+            if ((Canvas.GetLeft(img1) + img1.ActualWidth > Canvas.GetLeft(img2) && Canvas.GetLeft(img2) + img2.ActualWidth > Canvas.GetLeft(img1)) && (Canvas.GetTop(img1) + img1.ActualHeight > Canvas.GetTop(img2) && Canvas.GetTop(img2) + img2.ActualHeight > (Canvas.GetTop(img1))))
                 return true;
             return false;
 
@@ -172,17 +187,30 @@ namespace SNAKE
                 // ATTENTION : LES PAS DOIVENT ETRE DES MULTIPLES
                 // DE LA TAILLE DE L’IMAGE A DEPLACER
                 if (MainWindow.vitesse == 2)
-                {
                     MainWindow.PasSerpent = 10;
-                }
+
                 else if (MainWindow.vitesse == 1)
-                {
                     MainWindow.PasSerpent = 5;
-                }
+
                 else if (MainWindow.vitesse == 3)
-                {
                     MainWindow.PasSerpent = 15;
+
+                if (MainWindow.difficulte == 2)
+                {
+                    MainWindow.PasAigle = 5;
+                    MainWindow.PasPomme = 3;
                 }
+                else if(MainWindow.difficulte == 1)
+                {
+                    MainWindow.PasAigle = 3;
+                    MainWindow.PasPomme = 2;
+                }
+                else if( MainWindow.difficulte == 3)
+                {
+                    MainWindow.PasAigle = 10;
+                    MainWindow.PasPomme = 5;
+                }
+                    
             }
         }
     }

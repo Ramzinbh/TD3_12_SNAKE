@@ -23,6 +23,11 @@ namespace SNAKE
         public UCGameOver()
         {
             InitializeComponent();
+            MettreAJourAffichage();
+        }
+        private void MettreAJourAffichage()
+        {
+            labScoreGO.Content = MainWindow.score.ToString();
         }
     }
 }

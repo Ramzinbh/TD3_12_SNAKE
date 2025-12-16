@@ -20,6 +20,8 @@
                 <ImageBrush ImageSource="images/fondBouton.png" Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
-        <Image Margin="50,-43,50,136" Source="/images/GameOver.png" Stretch="Fill"/>
+        <Image Margin="148,-22,148,225" Source="/images/GameOver.png" Stretch="Fill"/>
+        <Image Margin="221,199,361,146" Source="/images/imgScore.png"/>
+        <Label x:Name="labScoreGO" Content="0" HorizontalAlignment="Left" Margin="414,210,0,0" VerticalAlignment="Top" Height="83" Width="55" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" Foreground="#FF607B30" FontWeight="Bold"/>
     </Grid>
 </UserControl>

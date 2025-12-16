@@ -19,6 +19,7 @@ namespace SNAKE
     {
         public static double vitesse;
         public static double difficulte;
+        public static int score = 0;
         public static int PasPomme { get; set; } = 3;
         public static int PasAigle { get; set; } = 5;
         public static int PasFond { get; set; } = 2;
