@@ -25,6 +25,8 @@ namespace SNAKE
         private static Random rand = new Random();
         private static DispatcherTimer minuterie;
         private static BitmapImage[] persos = new BitmapImage[2];
+
+        public event Action GameOverEvent;
         public static string CouleurSerpent { get; set; }
         public UCJeu()
         {
@@ -62,16 +64,38 @@ namespace SNAKE
             {
                 serpent.Source = persos[1];
             }
-            if (Canvas.GetTop(imgAigle) < canvasJeu.ActualHeight)
-                Canvas.SetTop(imgAigle, Canvas.GetTop(imgAigle) + MainWindow.PasAigle);
+            Tombe(imgAigle1, MainWindow.PasAigle);
+            Tombe(imgAigle2, MainWindow.PasAigle);
+            Tombe(imgPomme, MainWindow.PasPomme);
+            if (Collision(imgAigle1,serpent) == true)
+            {
+                GameOverEvent?.Invoke();
+            }
+            //Console.WriteLine("Position Top du cadeau :" + Canvas.GetTop(imgAigle1));
+        }
+        public static bool Collision(Image img1, Image img2)
+        {
+            if (Canvas.GetTop(img1) + img1.ActualHeight == Canvas.GetTop(img2))
+                return true;
+            if (Canvas.GetLeft(img1) + img1.ActualWidth == Canvas.GetLeft(img2))
+                return true;
+            if (Canvas.GetRight(img1) + img1.ActualWidth == Canvas.GetRight(img2))
+                return true;
+            if (Canvas.GetBottom(img1) + img1.ActualHeight == Canvas.GetBottom(img2))
+                return true;
+            return false;
+
+        }
+        public void Tombe(Image objet, int pas)
+        {
+            if (Canvas.GetTop(objet) < canvasJeu.ActualHeight)
+                Canvas.SetTop(objet, Canvas.GetTop(objet) + pas);
             else
             {
-                Canvas.SetTop(imgAigle, -imgAigle.ActualHeight);
-                Canvas.SetLeft(imgAigle, rand.Next(0, (int)canvasJeu.ActualWidth - (int)imgAigle.ActualWidth));
+                Canvas.SetTop(objet, -objet.ActualHeight);
+                Canvas.SetLeft(objet, rand.Next(0, (int)canvasJeu.ActualWidth - (int)objet.ActualWidth));
             }
-            Console.WriteLine("Position Top du cadeau :" + Canvas.GetTop(imgAigle));
         }
-        
 
         public void Deplace(Image image, int pas)
         {

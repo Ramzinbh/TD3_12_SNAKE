@@ -11,7 +11,10 @@
   <ItemGroup>
     <None Remove="images\aigle.png" />
     <None Remove="images\fondBouton.png" />
+    <None Remove="images\fondGameOver.png" />
     <None Remove="images\fondJeu.jpg" />
+    <None Remove="images\GameOver.png" />
+    <None Remove="images\pomme.png" />
     <None Remove="images\serpentBleu.png" />
     <None Remove="images\serpentBleuJeu_0.png" />
     <None Remove="images\serpentBleuJeu_1.png" />
@@ -28,7 +31,10 @@
     <Resource Include="images\aigle.png" />
     <Resource Include="images\backgroundMenu.png" />
     <Resource Include="images\fondBouton.png" />
+    <Resource Include="images\fondGameOver.png" />
     <Resource Include="images\fondJeu.jpg" />
+    <Resource Include="images\GameOver.png" />
+    <Resource Include="images\pomme.png" />
     <Resource Include="images\serpentBleu.png" />
     <Resource Include="images\serpentBleuJeu_0.png" />
     <Resource Include="images\serpentBleuJeu_1.png" />
