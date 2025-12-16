@@ -10,12 +10,12 @@
         <Grid.Background>
             <ImageBrush ImageSource="/images/fondGameOver.png"/>
         </Grid.Background>
-        <Button x:Name="butRejouer" Content="Rejouer" HorizontalAlignment="Left" Margin="157,314,0,0" VerticalAlignment="Top" Height="87" Width="200" FontWeight="Bold" FontSize="24" Foreground="#FF047500" IsEnabled="False">
+        <Button x:Name="butRejouer" Content="Rejouer" HorizontalAlignment="Left" Margin="157,314,0,0" VerticalAlignment="Top" Height="87" Width="200" FontWeight="Bold" FontSize="24" Foreground="#FF047500">
             <Button.Background>
                 <ImageBrush ImageSource="images/fondBouton.png" Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
-        <Button x:Name="butQuitter" Content="Quitter" HorizontalAlignment="Left" Margin="454,314,0,0" VerticalAlignment="Top" Height="87" Width="200" FontWeight="Bold" FontSize="24" Foreground="#FF047500" IsEnabled="False">
+        <Button x:Name="butQuitter" Content="Quitter" HorizontalAlignment="Left" Margin="454,314,0,0" VerticalAlignment="Top" Height="87" Width="200" FontWeight="Bold" FontSize="24" Foreground="#FF047500">
             <Button.Background>
                 <ImageBrush ImageSource="images/fondBouton.png" Stretch="UniformToFill"/>
             </Button.Background>

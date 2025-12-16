@@ -29,8 +29,9 @@ namespace SNAKE
         private static DispatcherTimer minuterie;
         private static BitmapImage[] persos = new BitmapImage[2];
 
-        public event Action GameOverEvent;
+        public event EventHandler GameOverEvent;
         public static string CouleurSerpent { get; set; }
+        public static bool GameOver { get; set; } = false;
         public UCJeu()
         {
             InitializeComponent();
@@ -78,17 +79,17 @@ namespace SNAKE
             Tombe(imgPomme, MainWindow.PasPomme);
             if (Collision(imgAigle1,serpent) == true)
             {
-                GameOverEvent?.Invoke();
+                GameOverEvent?.Invoke(this, EventArgs.Empty);
                 minuterie.Stop();
             }
             if (Collision(imgAigle2, serpent) == true)
             {
-                GameOverEvent?.Invoke();
+                GameOverEvent?.Invoke(this, EventArgs.Empty);
                 minuterie.Stop();
             }
             if (MainWindow.chances == 0)
             {
-                GameOverEvent?.Invoke();
+                GameOverEvent?.Invoke(this, EventArgs.Empty);
                 minuterie.Stop();
             }
             if (Collision(imgPomme, serpent) == true)

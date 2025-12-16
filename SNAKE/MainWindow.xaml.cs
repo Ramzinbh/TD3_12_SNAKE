@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Diagnostics.Eventing.Reader;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -48,18 +49,6 @@ namespace SNAKE
             ZoneJeu.Content = uc;
             uc.butJouer.Click += AfficheJeu;
         }
-
-        public void AfficheGameOver()
-        {
-            ZoneJeu.Content = new UCGameOver();
-        }
-
-        public void Jeu(object sender, RoutedEventArgs e)
-        {
-            UCJeu jeu = new UCJeu();
-            jeu.GameOverEvent += AfficheGameOver;
-            ZoneJeu.Content=jeu;
-        }
         private void InitMusique()
         {
             musique = new MediaPlayer();
@@ -78,6 +67,22 @@ namespace SNAKE
             UCJeu uc = new UCJeu();
             // associe l'écran au conteneur
             ZoneJeu.Content = uc;
+            uc.GameOverEvent += AfficheGameOver;
+        }
+        private void AfficheGameOver(object sender, EventArgs e)
+        {
+            UCGameOver uc = new UCGameOver();
+            ZoneJeu.Content = uc;
+            uc.butRejouer.Click += Rejouer;
+            uc.butQuitter.Click += Stop;
+        }
+        private void Rejouer(object sender, RoutedEventArgs e)
+        {
+            AfficheJeu(null, null);
+        }
+        private void Stop(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
