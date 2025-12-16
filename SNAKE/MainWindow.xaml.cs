@@ -78,6 +78,8 @@ namespace SNAKE
         }
         private void Rejouer(object sender, RoutedEventArgs e)
         {
+            score = 0;
+            chances = 3;
             AfficheJeu(null, null);
         }
         private void Stop(object sender, RoutedEventArgs e)
