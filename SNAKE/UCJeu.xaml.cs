@@ -147,39 +147,10 @@ namespace SNAKE
         private bool enPause;
         private void canvasJeu_KeyDown(object sender, KeyEventArgs e)
         {
-            if (Keyboard.IsKeyDown(Key.Right))
-            {
-                if ((Canvas.GetLeft(serpent) + MainWindow.PasSerpent) <= (canvasJeu.ActualWidth - serpent.ActualWidth))
-                {
-                    Canvas.SetLeft(serpent, Canvas.GetLeft(serpent) + MainWindow.PasSerpent);
-                }
-            }
-            if (Keyboard.IsKeyDown(Key.Left))
-            {
-                if ((Canvas.GetLeft(serpent) - MainWindow.PasSerpent) >= 0)
-                {
-                    Canvas.SetLeft(serpent, Canvas.GetLeft(serpent) - MainWindow.PasSerpent);
-                }
-            }
-            if (Keyboard.IsKeyDown(Key.Up))
-            {
-                if ((Canvas.GetTop(serpent) - MainWindow.PasSerpent) >= this.menuJeu.ActualHeight)
-                {
-                    Canvas.SetTop(serpent, Canvas.GetTop(serpent) - MainWindow.PasSerpent);
-                }
-            }
-            if (Keyboard.IsKeyDown(Key.Down))
-            {
-                if ((Canvas.GetTop(serpent) + MainWindow.PasSerpent) <= (canvasJeu.ActualHeight - serpent.ActualHeight))
-                {
-                    Canvas.SetTop(serpent, Canvas.GetTop(serpent) + MainWindow.PasSerpent);
-                }
-            }
-
             if (e.Key == Key.P)
             {
                 enPause = !enPause; // On inverse (Vrai devient Faux, et inversement).
-                    
+
                 // On affiche ou cache le texte PAUSE.
                 if (enPause == true)
                 {
@@ -191,8 +162,42 @@ namespace SNAKE
                     txtPause.Visibility = Visibility.Collapsed;
                     minuterie.Start();
                 }
-                return; // On arrête là, on ne bouge pas si on met pause.
+                 // On arrête là, on ne bouge pas si on met pause.
             }
+            if (!enPause)
+            {
+                if (Keyboard.IsKeyDown(Key.Right))
+                {
+                    if ((Canvas.GetLeft(serpent) + MainWindow.PasSerpent) <= (canvasJeu.ActualWidth - serpent.ActualWidth))
+                    {
+                        Canvas.SetLeft(serpent, Canvas.GetLeft(serpent) + MainWindow.PasSerpent);
+                    }
+                }
+                if (Keyboard.IsKeyDown(Key.Left))
+                {
+                    if ((Canvas.GetLeft(serpent) - MainWindow.PasSerpent) >= 0)
+                    {
+                        Canvas.SetLeft(serpent, Canvas.GetLeft(serpent) - MainWindow.PasSerpent);
+                    }
+                }
+                if (Keyboard.IsKeyDown(Key.Up))
+                {
+                    if ((Canvas.GetTop(serpent) - MainWindow.PasSerpent) >= this.menuJeu.ActualHeight)
+                    {
+                        Canvas.SetTop(serpent, Canvas.GetTop(serpent) - MainWindow.PasSerpent);
+                    }
+                }
+                if (Keyboard.IsKeyDown(Key.Down))
+                {
+                    if ((Canvas.GetTop(serpent) + MainWindow.PasSerpent) <= (canvasJeu.ActualHeight - serpent.ActualHeight))
+                    {
+                        Canvas.SetTop(serpent, Canvas.GetTop(serpent) + MainWindow.PasSerpent);
+                    }
+                }
+            }
+            
+
+            
 #if DEBUG
             Console.WriteLine("Position Left serpent :" + Canvas.GetLeft(serpent));
 #endif
