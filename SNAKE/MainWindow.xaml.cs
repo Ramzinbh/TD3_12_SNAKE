@@ -25,6 +25,7 @@ namespace SNAKE
         public static int chances = 3;
         private static MediaPlayer musique;
         public static SoundPlayer sonPommeMange = new SoundPlayer();
+        public static SoundPlayer sonAigleTue = new SoundPlayer();
         public static int PasPomme { get; set; } = 5;
         public static int PasAigle { get; set; } = 7;
         public static int PasFond { get; set; } = 2;
@@ -83,6 +84,7 @@ namespace SNAKE
         private void InitSon()
         {
             sonPommeMange = new SoundPlayer(Application.GetResourceStream(new Uri("pack://application:,,,/sons_musiques/sonPomme.wav")).Stream);
+            sonAigleTue = new SoundPlayer(Application.GetResourceStream(new Uri("pack://application:,,,/sons_musiques/sonAigle.wav")).Stream);
         }
         private void AfficheJeu(object sender, RoutedEventArgs e)
         {

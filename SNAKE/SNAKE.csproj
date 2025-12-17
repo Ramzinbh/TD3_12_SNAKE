@@ -27,6 +27,7 @@
     <None Remove="images\serpentVertJeu_0.png" />
     <None Remove="images\serpentVertJeu_1.png" />
     <None Remove="images\titreMenu.png" />
+    <None Remove="sons_musiques\sonAigle.wav" />
     <None Remove="sons_musiques\sonPomme.mp3" />
     <None Remove="sons_musiques\sonPomme.wav" />
   </ItemGroup>
@@ -54,6 +55,9 @@
     <Resource Include="images\serpentVertJeu_0.png" />
     <Resource Include="images\serpentVertJeu_1.png" />
     <Resource Include="images\titreMenu.png" />
+    <Resource Include="sons_musiques\sonAigle.wav">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="sons_musiques\sonPomme.wav">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

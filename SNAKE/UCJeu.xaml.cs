@@ -75,11 +75,13 @@ namespace SNAKE
             Tombe(imgPomme, MainWindow.PasPomme);
             if (Collision(imgAigle1,serpent) == true)
             {
+                MainWindow.sonAigleTue.Play();
                 GameOverEvent?.Invoke(this, EventArgs.Empty);
                 minuterie.Stop();
             }
             if (Collision(imgAigle2, serpent) == true)
             {
+                MainWindow.sonAigleTue.Play();
                 GameOverEvent?.Invoke(this, EventArgs.Empty);
                 minuterie.Stop();
             }
