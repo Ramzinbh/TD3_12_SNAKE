@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -14,6 +14,7 @@
     <None Remove="images\fondGameOver.png" />
     <None Remove="images\fondJeu.jpg" />
     <None Remove="images\GameOver.png" />
+    <None Remove="images\imgRegleJeu.png" />
     <None Remove="images\imgScore.png" />
     <None Remove="images\pomme.png" />
     <None Remove="images\serpentBleu.png" />
@@ -37,6 +38,7 @@
     <Resource Include="images\fondGameOver.png" />
     <Resource Include="images\fondJeu.jpg" />
     <Resource Include="images\GameOver.png" />
+    <Resource Include="images\imgRegleJeu.png" />
     <Resource Include="images\imgScore.png" />
     <Resource Include="images\pomme.png" />
     <Resource Include="images\serpentBleu.png" />

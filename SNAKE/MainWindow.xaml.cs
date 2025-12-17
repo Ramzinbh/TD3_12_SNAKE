@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.Eventing.Reader;
+using System.Media;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,8 +24,9 @@ namespace SNAKE
         public static int score = 0;
         public static int chances = 3;
         private static MediaPlayer musique;
-        public static int PasPomme { get; set; } = 8;
-        public static int PasAigle { get; set; } = 10;
+        public static SoundPlayer sonPommeMange = new SoundPlayer();
+        public static int PasPomme { get; set; } = 5;
+        public static int PasAigle { get; set; } = 7;
         public static int PasFond { get; set; } = 2;
         public static int PasSerpent { get; set; } = 10;
         public MainWindow()
@@ -32,14 +34,30 @@ namespace SNAKE
             InitializeComponent();
             AfficheRegleJeu();
             InitMusique();
+            InitSon();
         }
-
         private void AfficheRegleJeu()
         {
             UCReglesJeu uc = new UCReglesJeu();
             // associe l'écran au conteneur
             ZoneJeu.Content = uc;
             uc.butDemarrer.Click += AfficheChoixPerso;
+            uc.butRegleJeu.Click += AfficheButJeu;
+        }
+        private void AfficheRegleJeu(object sender, RoutedEventArgs e)
+        {
+            UCReglesJeu uc = new UCReglesJeu();
+            // associe l'écran au conteneur
+            ZoneJeu.Content = uc;
+            uc.butDemarrer.Click += AfficheChoixPerso;
+            uc.butRegleJeu.Click += AfficheButJeu;
+        }
+
+        private void AfficheButJeu(object sender, RoutedEventArgs e)
+        {
+            UCButJeu uc = new UCButJeu();
+            ZoneJeu.Content = uc;
+            uc.butRetour.Click += AfficheRegleJeu;
         }
 
         private void AfficheChoixPerso(object sender, RoutedEventArgs e)
@@ -61,6 +79,10 @@ namespace SNAKE
         {
             musique.Position = TimeSpan.Zero;
             musique.Play();
+        }
+        private void InitSon()
+        {
+            sonPommeMange = new SoundPlayer(Application.GetResourceStream(new Uri("pack://application:,,,/sons_musiques/sonPomme.wav")).Stream);
         }
         private void AfficheJeu(object sender, RoutedEventArgs e)
         {

@@ -24,7 +24,7 @@ namespace SNAKE
     
     public partial class UCJeu : UserControl
     {
-        private static SoundPlayer sonPommeMange = new SoundPlayer();
+        
         private static Random rand = new Random();
         private static DispatcherTimer minuterie;
         private static BitmapImage[] persos = new BitmapImage[2];
@@ -37,7 +37,6 @@ namespace SNAKE
             InitializeComponent();
             InitializeImages();
             InitializeTimer();
-            InitSon();
         }
         private void InitializeImages()
         {
@@ -53,10 +52,7 @@ namespace SNAKE
             minuterie.Tick += Jeu;
             minuterie.Start();
         }
-        private void InitSon()
-        {
-            sonPommeMange = new SoundPlayer(Application.GetResourceStream(new Uri("pack://application:,,,/sons_musiques/sonPomme.wav")).Stream);
-        }
+        
 
 
         private int nb = 0;
@@ -94,12 +90,12 @@ namespace SNAKE
             }
             if (Collision(imgPomme, serpent) == true)
             {
+                MainWindow.sonPommeMange.Play();
                 MainWindow.score += 1;
                 MettreAJourAffichage();
                 Canvas.SetTop(imgPomme, -imgPomme.ActualHeight);
                 Canvas.SetLeft(imgPomme, rand.Next(0, (int)canvasJeu.ActualWidth - (int)imgPomme.ActualWidth));
-                sonPommeMange.Play();
-                sonPommeMange.Stop();
+                
             }
             if (Canvas.GetTop(imgPomme) >= canvasJeu.ActualHeight)
             {
@@ -224,18 +220,18 @@ namespace SNAKE
 
                 if (MainWindow.difficulte == 2)
                 {
-                    MainWindow.PasAigle = 10;
-                    MainWindow.PasPomme = 8;
+                    MainWindow.PasAigle = 7;
+                    MainWindow.PasPomme = 5;
                 }
                 else if(MainWindow.difficulte == 1)
                 {
-                    MainWindow.PasAigle = 5;
-                    MainWindow.PasPomme = 4;
+                    MainWindow.PasAigle = 4;
+                    MainWindow.PasPomme = 3;
                 }
                 else if( MainWindow.difficulte == 3)
                 {
-                    MainWindow.PasAigle = 15;
-                    MainWindow.PasPomme = 12;
+                    MainWindow.PasAigle = 10;
+                    MainWindow.PasPomme = 8;
                 }
                     
             }

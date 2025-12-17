@@ -10,7 +10,12 @@
         <Grid.Background>
             <ImageBrush ImageSource="images/backgroundMenu.png"/>
         </Grid.Background>
-        <Button x:Name="butDemarrer" Content="Démarrer" HorizontalAlignment="Center" Margin="0,314,0,0" VerticalAlignment="Top" Height="87" Width="200" FontWeight="Bold" FontSize="24" Foreground="#FF047500">
+        <Button x:Name="butDemarrer" Content="Démarrer" HorizontalAlignment="Left" Margin="150,314,0,0" VerticalAlignment="Top" Height="87" Width="200" FontWeight="Bold" FontSize="24" Foreground="#FF047500">
+            <Button.Background>
+                <ImageBrush ImageSource="images/fondBouton.png" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="butRegleJeu" Content="Régles du jeu" HorizontalAlignment="Left" Margin="483,314,0,0" VerticalAlignment="Top" Height="87" Width="200" FontWeight="Bold" FontSize="24" Foreground="#FF047500">
             <Button.Background>
                 <ImageBrush ImageSource="images/fondBouton.png" Stretch="UniformToFill"/>
             </Button.Background>

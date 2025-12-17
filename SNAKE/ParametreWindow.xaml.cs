@@ -20,14 +20,12 @@ namespace SNAKE
     /// </summary>
     public partial class ParametreWindow : Window
     {
-        private static SoundPlayer son;
         public ParametreWindow()
         {
             InitializeComponent();
             this.slidVitesse.Value = MainWindow.vitesse;
             this.slidDifficulte.Value = MainWindow.difficulte;
-            if (this.slidVitesse.Value == 1 && this.slidDifficulte.Value == 3)
-                this.butTriche.IsEnabled = true;
+
         }
         private void butValider_Click(object sender, RoutedEventArgs e)
         {
