@@ -14,6 +14,7 @@
     <None Remove="images\fondGameOver.png" />
     <None Remove="images\fondJeu.jpg" />
     <None Remove="images\GameOver.png" />
+    <None Remove="images\iconeJeu.ico" />
     <None Remove="images\imgRegleJeu.png" />
     <None Remove="images\imgScore.png" />
     <None Remove="images\pomme.png" />
@@ -30,6 +31,10 @@
     <None Remove="sons_musiques\sonAigle.wav" />
     <None Remove="sons_musiques\sonPomme.mp3" />
     <None Remove="sons_musiques\sonPomme.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\iconeJeu.ico" />
   </ItemGroup>
 
   <ItemGroup>
