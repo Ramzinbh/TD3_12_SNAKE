@@ -22,6 +22,6 @@
         </Button>
         <Image Margin="148,-22,148,225" Source="/images/GameOver.png" Stretch="Fill"/>
         <Image Margin="221,199,361,146" Source="/images/imgScore.png"/>
-        <Label x:Name="labScoreGO" Content="0" HorizontalAlignment="Left" Margin="378,190,0,0" VerticalAlignment="Top" Height="82" Width="55" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" Foreground="#FF607B30" FontWeight="Bold"/>
+        <Label x:Name="labScoreGO" Content="0" HorizontalAlignment="Left" Margin="378,190,0,0" VerticalAlignment="Top" Height="82" Width="102" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" Foreground="#FF607B30" FontWeight="Bold"/>
     </Grid>
 </UserControl>
