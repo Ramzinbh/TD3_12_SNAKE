@@ -143,39 +143,38 @@ namespace SNAKE
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             Application.Current.MainWindow.KeyDown += canvasJeu_KeyDown;
-            //    Application.Current.MainWindow.KeyUp += canvasJeu_KeyUp;
         }
         private bool enPause;
         private void canvasJeu_KeyDown(object sender, KeyEventArgs e)
         {
-                    if (Keyboard.IsKeyDown(Key.Right))
-                    {
-                        if ((Canvas.GetLeft(serpent) + MainWindow.PasSerpent) <= (canvasJeu.ActualWidth - serpent.ActualWidth))
-                        {
-                            Canvas.SetLeft(serpent, Canvas.GetLeft(serpent) + MainWindow.PasSerpent);
-                        }
-                    }
-                    if (Keyboard.IsKeyDown(Key.Left))
-                    {
-                        if ((Canvas.GetLeft(serpent) - MainWindow.PasSerpent) >= 0)
-                        {
-                            Canvas.SetLeft(serpent, Canvas.GetLeft(serpent) - MainWindow.PasSerpent);
-                        }
-                    }
-                    if (Keyboard.IsKeyDown(Key.Up))
-                    {
-                        if ((Canvas.GetTop(serpent) - MainWindow.PasSerpent) >= this.menuJeu.ActualHeight)
-                        {
-                            Canvas.SetTop(serpent, Canvas.GetTop(serpent) - MainWindow.PasSerpent);
-                        }
-                    }
-                    if (Keyboard.IsKeyDown(Key.Down))
-                    {
-                        if ((Canvas.GetTop(serpent) + MainWindow.PasSerpent) <= (canvasJeu.ActualHeight - serpent.ActualHeight))
-                        {
-                            Canvas.SetTop(serpent, Canvas.GetTop(serpent) + MainWindow.PasSerpent);
-                        }
-                    }
+            if (Keyboard.IsKeyDown(Key.Right))
+            {
+                if ((Canvas.GetLeft(serpent) + MainWindow.PasSerpent) <= (canvasJeu.ActualWidth - serpent.ActualWidth))
+                {
+                    Canvas.SetLeft(serpent, Canvas.GetLeft(serpent) + MainWindow.PasSerpent);
+                }
+            }
+            if (Keyboard.IsKeyDown(Key.Left))
+            {
+                if ((Canvas.GetLeft(serpent) - MainWindow.PasSerpent) >= 0)
+                {
+                    Canvas.SetLeft(serpent, Canvas.GetLeft(serpent) - MainWindow.PasSerpent);
+                }
+            }
+            if (Keyboard.IsKeyDown(Key.Up))
+            {
+                if ((Canvas.GetTop(serpent) - MainWindow.PasSerpent) >= this.menuJeu.ActualHeight)
+                {
+                    Canvas.SetTop(serpent, Canvas.GetTop(serpent) - MainWindow.PasSerpent);
+                }
+            }
+            if (Keyboard.IsKeyDown(Key.Down))
+            {
+                if ((Canvas.GetTop(serpent) + MainWindow.PasSerpent) <= (canvasJeu.ActualHeight - serpent.ActualHeight))
+                {
+                    Canvas.SetTop(serpent, Canvas.GetTop(serpent) + MainWindow.PasSerpent);
+                }
+            }
 
             if (e.Key == Key.P)
             {
